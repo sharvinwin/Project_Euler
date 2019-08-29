@@ -1,0 +1,25 @@
+## declare variables
+fibonanci = 0
+#ums = range(1,4000000)
+x = 1
+y = 2
+Nums = []
+Sum = 0
+
+## run the calculations 
+while True :
+  fibonanci = x + y
+  if fibonanci > 4000000 :
+    break
+  x = y
+  y = fibonanci
+  Nums.append(fibonanci)
+  #print (x)
+  #print (y)
+  print (fibonanci)
+
+for e in Nums :
+  if e % 2 == 0 :
+    Sum = e + Sum
+
+print (Sum)
