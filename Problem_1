@@ -1,0 +1,9 @@
+## declare variables
+sum = 0
+nums = range(1,1000)
+
+## run the calculations 
+for i in nums :
+  if i % 3 == 0 or i % 5 == 0 :
+    sum = i + sum
+print (sum)
