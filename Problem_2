@@ -22,4 +22,4 @@ for e in Nums :
   if e % 2 == 0 :
     Sum = e + Sum
 
-print (Sum)
+print ("Sum is",Sum)
