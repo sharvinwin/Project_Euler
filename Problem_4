@@ -1,0 +1,30 @@
+## define the variables
+triple = 999
+h_triple = triple**2
+print ("\n")
+print ("Highest Possible Value is :",h_triple)
+print ("\n")
+ori = h_triple
+#inv = 0
+count = h_triple
+
+## run the calculation
+while True :
+  ori = count 
+  inv = 0
+  # inv default value not zero if put outside loop
+  while ori > 0:
+    inv = inv*10 + ori % 10
+    ori = ori // 10  
+    ## / have decimals and // has no decimals, take whole number
+  count -= 1
+  print ("inverse :",inv)
+  #print ("original :",ori)
+  print ("count   :",count)
+  if count == inv :
+    print ("\n")
+    print ("Answer is :",count)
+    break
+
+## https://stackoverflow.com/questions/57800462/issues-with-assigning-values-to-variable-in-python
+## got bugs
