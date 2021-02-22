@@ -1,1 +1,39 @@
+### Input ###
+number_range = 20
+
+### CODE ###
+print ("Code starts here")
+
+# function to find prime number and remainder
+def is_prime_number(x):
+    if x >= 2:
+        for y in range(2,x):
+            if not ( x % y ):
+                return False
+    else:
+	    return False
+    return True
+
+def remainder (y):
+  remainder_total = 0
+  for z in range(2, number_range+1):
+    remainder = y % z
+    remainder_total = remainder_total + remainder
+  if remainder_total == 0:
+    print("This is the value has no remainder", y)
+    return True
+
+# find the prime numbers in the range and multiply them
+b = range (1,number_range+1)
+k = 1
+
+for z in b :
+  if is_prime_number(z) is True :
+    k = z * k
+  
+print ("Total multiple of prime number is ",k)
+for v in range (1,10000) :
+  b = k * v
+  if remainder(b) is True :
+    break
 
