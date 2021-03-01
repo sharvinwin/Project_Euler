@@ -1,0 +1,35 @@
+'''
+PROBLEM 10 
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below two million.
+
+NOTES:
+https://www.tutorialspoint.com/different-methods-to-find-prime-number-in-python-program
+https://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n
+'''
+import time 
+import math
+
+n=0 
+start = time.time()
+
+def isPrimeNumber (n):
+    if n <= 1 :
+        return False
+    elif n == 2 :   
+        return False
+    elif n > 2 and n % 2 == 0 :
+        return False
+    else :
+        for i in range (3,int(math.sqrt(n)) + 1,2 ) :
+            if n % i == 0:
+                return False
+        return True 
+
+for j in range (2,2000000) :
+    if isPrimeNumber(j) is True :
+        n+=j
+print ("Sum is : ",n)
+end = time.time() - start
+print ("Runtime : ", end, "seconds")
